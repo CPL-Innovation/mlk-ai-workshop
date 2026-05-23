@@ -444,17 +444,22 @@ function Survey() {
       </div>
 
       <div className="survey">
-        <div className="survey-qr" aria-hidden="true">
-          {/* Decorative QR-ish pattern — real QR is a separate code shared verbally */}
-          {Array.from({length: 64}).map((_, i) => {
-            // pseudo-random but deterministic pattern
-            const on = ((i * 7 + (i % 5) * 3 + (i % 11)) % 5) < 2 || [0,1,2,7,8,15,48,49,50,55,56,57,58,59,60,61,62,63].includes(i) ;
-            return on ? <i key={i}/> : <span key={i}/>;
-          })}
-        </div>
-        <h3 className="survey-h">Scan the survey QR before you leave</h3>
-        <p>We'll share it verbally in your room at the end. It directly shapes the next CPL AI workshop — and tells us whether to bring this to more branches.</p>
-        <p><strong>Thank you</strong> for spending your Friday morning here. — The MLK Branch team</p>
+        <h3 className="survey-h">Take the 5-minute exit survey</h3>
+        <p>It directly shapes the next CPL AI workshop — and tells us whether to bring this to more branches.</p>
+        <a
+          className="cta is-gold"
+          href="https://forms.office.com/Pages/ResponsePage.aspx?id=4GIkiTBmW02jEbkA_x5DN__S0NiQKcxDpxk8bO4FzDdUNjA0MDBISldaMVFBRjNKUk9FVEg1WTcxRC4u"
+          target="_blank"
+          rel="noopener"
+          style={{marginTop: 14}}
+        >
+          <span className="cta-text">
+            Open the survey
+            <span className="cta-small">forms.office.com · ~5 minutes</span>
+          </span>
+          <span className="cta-arrow"><Icon.arrow/></span>
+        </a>
+        <p style={{marginTop: 14}}><strong>Thank you</strong> for spending your Friday morning here. — The MLK Branch team</p>
       </div>
     </section>
   );
