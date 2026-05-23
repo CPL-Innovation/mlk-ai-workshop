@@ -5,9 +5,9 @@ const { useState, useEffect, useMemo } = React;
 
 /* ─────────────────────────────────────────────
    Schedule definition — all times in event timezone (Eastern)
-   Event: Friday May 23, 2026, 10:00 AM – 12:00 PM
+   Event: Saturday May 23, 2026, 10:00 AM – 12:00 PM
 ───────────────────────────────────────────── */
-const EVENT_DATE_LABEL = "Fri, May 23, 2026";
+const EVENT_DATE_LABEL = "Sat, May 23, 2026";
 // Each row: minutes-from-start range, time label, title, where
 const SCHEDULE = [
   { start:   0, end:  50, time: "10:00", end_label: "10:50am", title: "Talks",                  what: "Short stories from real people using AI in their everyday lives.", where: "Main room (here)" },
@@ -196,7 +196,7 @@ function Hero() {
       <div className="hero-eyebrow">A Workshop · {EVENT_DATE_LABEL}</div>
       <h1 className="hero-title">Cleveland uses AI.<br/><em>So can you.</em></h1>
       <div className="hero-meta">
-        <div><strong>Friday, May 23 · 10:00am – 12:00pm</strong></div>
+        <div><strong>Saturday, May 23 · 10:00am – 12:00pm</strong></div>
         <div>MLK Jr. Branch · Main room</div>
       </div>
       <p className="hero-welcome">
@@ -459,7 +459,7 @@ function Survey() {
           </span>
           <span className="cta-arrow"><Icon.arrow/></span>
         </a>
-        <p style={{marginTop: 14}}><strong>Thank you</strong> for spending your Friday morning here. — The MLK Branch team</p>
+        <p style={{marginTop: 14}}><strong>Thank you</strong> for spending your Saturday morning here. — The MLK Branch team</p>
       </div>
     </section>
   );
